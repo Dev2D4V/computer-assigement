@@ -1,0 +1,1343 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Times New Roman;}{\f2\fnil\fcharset161 Calibri;}{\f3\fnil\fcharset0 Cambria;}{\f4\fnil Times New Roman;}{\f5\fnil\fcharset0 Roboto;}{\f6\fnil\fcharset0 Courier New;}{\f7\fnil\fcharset1 Cambria Math;}{\f8\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red17\green17\blue17;\red0\green0\blue255;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont7\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9      \fs40 Name - Devendra Gupta\par
+      Sec. - AY(1)\par
+Roll No. - 20\fs22                                       \fs320  \fs22\par
+
+\pard\ri-810\sa200\sl276\slmult1\tx7020\fs40                            \fs44 Assignment - 1\fs320  \fs40\par
+
+\pard\sa200\sl276\slmult1\fs22 Q1. Write a C program for calculating the price of a product  after adding the sales tax to its orignal price. where rate of tax and price is inputted by user.\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    float originalPrice, taxRate, finalPrice;\par
+\fs24                       \fs22\par
+    \par
+    printf("Enter the original price of the product: $");\par
+    scanf("%f", &originalPrice);\par
+\par
+   \par
+    scanf("%f", &taxRate);\par
+\par
+    finalPrice = originalPrice + (originalPrice * taxRate / 100.0);\par
+\par
+  \par
+    printf("The final price after adding %.2f%% sales tax is: $%.2f\\n", taxRate, finalPrice);\par
+\par
+    return 0;\par
+\}\par
+Q2.Write a C pogram to calculate the weekly weges of an employee . The pay depends on wages per hour and number of hours worked for more than 30 hours,then he or she gets twice the wages per hour , for every extra hour that he or she  has worked.\par
+\par
+\par
+#include<stdio.h>\par
+int main() \{\par
+    float hourlyWage, hoursWorked, weeklyWages;\par
+\par
+    \par
+    printf("Enter the hourly wage: $");\par
+    scanf("%f", &hourlyWage);\par
+\par
+    printf("Enter the number of hours worked in a week: ");\par
+    scanf("%f", &hoursWorked);\par
+\par
+    \par
+    if (hoursWorked >= 30) \{\par
+        weeklyWages = hourlyWage * hoursWorked;\par
+    \} else \{\par
+        \par
+        weeklyWages = hourlyWage * 30;\par
+\par
+        \par
+        float overtimeHours = hoursWorked - 30;\par
+        weeklyWages += (hourlyWage * 2.0) * overtimeHours;\par
+    \}\par
+printf("Weekly wages: $%.2f\\n", weekly weges);\par
+return 0;\par
+\}\par
+\par
+ Q3. This program calculates the total cost of the fruits and vegetables purchased and then checks if Mr. X paid enough or if he needs to pay more. If he paid more than the total cost, the program will display the amount to be returned; otherwise, it will display the amount he needs to pay more.\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    \par
+    float applePricePerKg = 50.0;\par
+    float mangoPricePerKg = 35.0;\par
+    float potatoPricePerKg = 10.0;\par
+    float tomatoPricePerKg = 15.0;\par
+\par
+    float totalAmountSpent;\par
+    float amountPaid = 500.0;\par
+\par
+    \par
+    float appleCost = 2.0 * applePricePerKg;\par
+    float mangoCost = 1.5 * mangoPricePerKg;\par
+    float potatoCost = 2.5 * potatoPricePerKg;\par
+    float tomatoCost = 1.0 * tomatoPricePerKg;\par
+\par
+    totalAmountSpent = appleCost + mangoCost + potatoCost + tomatoCost;\par
+    \par
+    float amountToReturn = amountPaid - totalAmountSpent;\par
+\par
+    if (amountToReturn >= 0) \{\par
+        printf("Mr. X paid enough. The shopkeeper will return Rs. %.2f\\n", amountToReturn);\par
+    \} else \{\par
+        printf("Mr. X didn't pay enough. He needs to pay Rs. %.2f more.\\n", -amountToReturn);\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+Q4.Write a C program to print your name, date of birth and mobile number in 3 different lines.\par
+\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    \par
+    char name[] = "Your Name";\par
+    char dateOfBirth[] = "Your Date of Birth";\par
+    char mobileNumber[] = "Your Mobile Number";\par
+\par
+    printf("Name: %s\\n", name);\par
+\par
+    printf("Date of Birth: %s\\n", dateOfBirth);\par
+\par
+    \par
+    printf("Mobile Number: %s\\n", mobileNumber);\par
+\par
+    return 0;\par
+\}\par
+\par
+
+\pard\sl360\slmult1\qj\f1\fs24 Q5.Write a program to read an integer, a character and a float value from keyboard and display the same in different lines on the screen.\par
+
+\pard\sa200\sl276\slmult1\f0\fs22\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    int integerNum;\par
+    char character;\par
+    float floatNum;\par
+\par
+    \par
+    printf("Enter an integer: ");\par
+    scanf("%d", &integerNum);\par
+\par
+    \par
+    printf("Enter a character: ");\par
+    scanf(" %c", &character); \par
+\par
+    printf("Enter a float value: ");\par
+    scanf("%f", &floatNum);\par
+\par
+    printf("Integer: %d\\n", integerNum);\par
+    printf("Character: %c\\n", character);\par
+    printf("Float: %.2f\\n", floatNum);\par
+\par
+    return 0;\par
+\}\par
+\par
+Q6.Write a program to print the following line ( Assume the total value is contained in a variable named cost)\par
+The sales total is : $ 172.53\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    \par
+    double cost = 172.53;\par
+\par
+       printf("The sales total is: $ %.2lf\\n", cost);\par
+\par
+    return 0;\par
+\}\par
+\par
+Q7.Raju got 6 and half apples from each of Raghu, Sheenu and Akash. He wants to know how many apples he has in total without adding them. Write a program which could help Raju in doing this.\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    int apples_from_each = 6;\par
+    float half_apple = 0.5;\par
+\par
+    \par
+    float total_apples = 3 * (apples_from_each + half_apple);\par
+    \par
+    printf("Raju has a total of %.2f apples.\\n", total_apples);\par
+\par
+    return 0;\par
+\}\par
+\par
+\par
+Q8.Write a program that prints the floating point value in exponential format correct to two decimal places.\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    double floatValue = 1234.56789;\par
+\par
+   printf("Value in exponential format: %.2e\\n", floatValue);\par
+\par
+    return 0;\par
+\}\par
+\par
+.Q9 Write a program to input and print your mobile number (i.e. of 10 digits).\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    char mobileNumber[11]; // 10 digits + 1 for the null terminator\par
+\par
+   \par
+    printf("Enter your 10-digit mobile number: ");\par
+    scanf("%s", mobileNumber);\par
+\par
+    if (strlen(mobileNumber) == 10) \{\par
+        \par
+        printf("Your mobile number is: %s\\n", mobileNumber);\par
+    \} else \{\par
+        printf("Invalid input. Please enter a 10-digit mobile number.\\n");\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+Q10.The population of a city is 30000. It increases by 20 % during first year and 30% during the second year. Write a program to find the population after two years? (Ans: 46800)\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    int initialPopulation = 30000;\par
+    float firstYearGrowthRate = 0.20; // 20% growth\par
+    float secondYearGrowthRate = 0.30; // 30% growth\par
+\par
+       float populationAfterFirstYear = initialPopulation + (initialPopulation * firstYearGrowthRate);\par
+\par
+    \par
+    float populationAfterSecondYear = populationAfterFirstYear + (populationAfterFirstYear * secondYearGrowthRate);\par
+    printf("Population after two years: %.0f\\n", populationAfterSecondYear);\par
+\par
+    return 0;\par
+\}\par
+\par
+Q11. Write a program to find the ASCII value of a character\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    char character;\par
+\par
+  \par
+    printf("Enter a character: ");\par
+    scanf("%c", &character);\par
+\par
+   \par
+    printf("The ASCII value of '%c' is %d\\n", character, character);\par
+\par
+    return 0;\par
+\}\par
+\par
+Q12. Write a program to calculate salary of an employee, given his basic pay (entered by user), HRA=15% of the basic pay and TA=20% of the basic pay.\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    float basicPay, hra, ta, salary;\par
+\par
+   \par
+    printf("Enter the basic pay: $");\par
+    scanf("%f", &basicPay);\par
+\par
+    \par
+    hra = 0.15 * basicPay; \par
+    ta = 0.20 * basicPay;  \par
+\par
+   \par
+    salary = basicPay + hra + ta;\par
+\par
+    \par
+    printf("Basic Pay: $%.2f\\n", basicPay);\par
+    printf("HRA: $%.2f\\n", hra);\par
+    printf("TA: $%.2f\\n", ta);\par
+    printf("Total Salary: $%.2f\\n", salary);\par
+\par
+    return 0;\par
+\}\par
+Q13. Write a program to find  the slope of a line and angle of inclination that passes through two points P and Q with coordinates (xp, yp) and (xq, yq) respectively.\par
+\par
+#include <stdio.h>\par
+#include <math.h>\par
+\par
+int main() \{\par
+    double xp, yp, xq, yq;\par
+    double slope, angle;\par
+\par
+    \par
+    printf("Enter the coordinates of point P (xp yp): ");\par
+    scanf("%lf %lf", &xp, &yp);\par
+\par
+    printf("Enter the coordinates of point Q (xq yq): ");\par
+    scanf("%lf %lf", &xq, &yq);\par
+\par
+   \par
+    if (xp == xq) \{\par
+        \par
+        printf("The line is vertical, and the slope is undefined.\\n");\par
+    \} else \{\par
+        slope = (yq - yp) / (xq - xp);\par
+\par
+        angle = atan(slope);\par
+\par
+        angle = angle * 180 / M_PI;\par
+\par
+        printf("Slope of the line: %.2lf\\n", slope);\par
+        printf("Angle of inclination (in degrees): %.2lf\\n", angle);\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+Q14. The SPI (Semester Performance Index) is a weighted average of the grade points earned by a student in all the courses he registered for in a semester. If the grade points associated with the letter grades awarded to a student are g1, g2, g3,\'85\'85.gk etc. and the corresponding credits are c1, c2, c3,.\'85..ck, the SPI is  given by:\par
+\par
+Where, k is the number of courses for which the candidate remains registered for during the semester/ trimester. Write a program in C to calculate SPI for k =5.\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    int k = 5; \par
+    double gradePoints[] = \{3.5, 4.0, 3.0, 3.7, 3.2\}; \par
+    double credits[] = \{4.0, 3.0, 3.0, 2.0, 4.0\}; \par
+    \par
+    double weightedGradePoints = 0.0;\par
+    double totalCredits = 0.0;\par
+\par
+    for (int i = 0; i < k; i++) \{\par
+        weightedGradePoints += gradePoints[i] * credits[i];\par
+        totalCredits += credits[i];\par
+    \}\par
+\par
+    if (totalCredits > 0) \{\par
+        double spi = weightedGradePoints / totalCredits;\par
+        printf("SPI for %d courses is: %.2lf\\n", k, spi);\par
+    \} else \{\par
+        printf("Error: Total credits cannot be zero.\\n");\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+Q 15. Write a program to calculate the frequency (f) of a given wave with wavelength (\f2\lang1032\'eb) and speed (c), where c=\'eb*f.\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    double wavelength, speed, frequency;\par
+\par
+    printf("Enter the wavelength (in meters): ");\par
+    scanf("%lf", &wavelength);\par
+\par
+    printf("Enter the speed (in meters per second): ");\par
+    scanf("%lf", &speed);\par
+\par
+    frequency = speed / wavelength;\par
+\par
+    printf("The frequency of the wave is %.2lf hertz (Hz)\\n", frequency);\par
+\par
+    return 0;\par
+\}\f0\lang9\par
+\par
+Q 16. A car travelling at 30 m/s accelerates steadily at 5 m/s2 for a distance of 70 m. What is the final velocity of the car? [Hint: v2 = u2 + 2as] .\par
+\par
+#include <stdio.h>\par
+#include <math.h>\par
+\par
+int main() \{\par
+    double u = 30.0;   \par
+    double a = 5.0;    \par
+    double s = 70.0;   \par
+    double v;         \par
+\par
+    v = sqrt(u * u + 2.0 * a * s);\par
+\par
+    printf("The final velocity of the car is %.2lf m/s\\n", v);\par
+\par
+    return 0;\par
+\}\par
+\par
+Q 17.A horse accelerates steadily from rest at 4 m/s2 for 3s. (a) What is its final velocity? (b) How far has it travelled? [Hint: (a) v = u + at (b)  s = ut + \'bdat2 ].\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    double u = 0.0;   \par
+    double a = 4.0;   \par
+    double t = 3.0;   \par
+    double v;         \par
+    double s;       \par
+\par
+    v = u + (a * t);\par
+\par
+    s = (u * t) + (0.5 * a * t * t);\par
+\par
+    printf("The final velocity of the horse is %.2lf m/s\\n", v);\par
+    printf("The distance traveled by the horse is %.2lf meters\\n", s);\par
+\par
+    return 0;\par
+\}\par
+
+\pard\sl360\slmult1\qj\f1\fs24 Q 18.\f3  Write a program to find the sum of your four last digit of your university roll number .\par
+\par
+
+\pard\sa200\sl276\slmult1\f0\fs22 #include <stdio.h>\par
+\par
+int main() \{\par
+    \par
+    int rollNumber = 12345678;\par
+\par
+    int lastFourDigits = rollNumber % 10000;\par
+\par
+    int sum = 0;\par
+\par
+    while (lastFourDigits > 0) \{\par
+        sum += lastFourDigits % 10;\par
+        lastFourDigits /= 10;\par
+    \}\par
+\par
+    printf("Sum of the last four digits of your roll number: %d\\n", sum);\par
+\par
+    return 0;\par
+\}\par
+\par
+\f3\fs24 Q19. Write a program to initialize your height and weight in cm. and kgs respectively demonstrating compile time initialization and convert them in feets and pounds respectively.  \b Note :- 1 cm = 0.393701inch , 1 Kg = 2.20462\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+ \par
+    double heightInCm = 175.0; \par
+    double weightInKg = 70.0;  \par
+\par
+    double cmToInch = 0.393701;\par
+    double kgToPound = 2.20462;\par
+\par
+    double heightInFeet = heightInCm * cmToInch / 12.0;\par
+\par
+    double weightInPounds = weightInKg * kgToPound;\par
+\par
+    printf("Height: %.2f cm = %.2f feet\\n", heightInCm, heightInFeet);\par
+    printf("Weight: %.2f kg = %.2f pounds\\n", weightInKg, weightInPounds);\par
+\par
+    return 0;\par
+\}\par
+\par
+
+\pard\sl360\slmult1\qj\b0\f1 Q 20 . Code the variable declarations for each of following:\par
+
+\pard{\pntext\f8\'B7\tab}{\*\pn\pnlvlblt\pnf8\pnindent360{\pntxtb\'B7}}\fi-360\li360\sl240\slmult1\qj A character variable named option.\par
+{\pntext\f8\'B7\tab}An integer variable sum initialized to 0\par
+
+\pard\sa200\sl276\slmult1 A floating point variable, product, initialized to 1\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    char option;          \par
+    int sum = 0;          \par
+    float product = 1.0;  \par
+\par
+    return 0;\par
+\}\f0\fs22\par
+\par
+\f1\fs24 Q21. Write a program that reads nine integers. Display these numbers by printing three numbers in a line separated by commas\par
+\par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    int numbers[9]; \par
+\par
+    printf("Enter nine integers, separated by spaces:\\n");\par
+    for (int i = 0; i < 9; i++) \{\par
+        scanf("%d", &numbers[i]);\par
+    \}\par
+\par
+    printf("Numbers in groups of three, separated by commas:\\n");\par
+    for (int i = 0; i < 9; i++) \{\par
+        printf("%d", numbers[i]);\par
+        \par
+        if ((i + 1) % 3 != 0 && i < 8) \{\par
+            printf(", ");\par
+        \}\par
+        \par
+        if ((i + 1) % 3 == 0) \{\par
+            printf("\\n");\par
+        \}\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\par
+Q22. What are header files and what are its uses in C programming\par
+\par
+ Ans -  Header files in C programming are files that contain declarations of functions, variables, and macros that can be used in multiple source files (.c files). They provide a way to organize and modularize your code, making it more manageable and maintainable. \f0\fs22\par
+To use a header file, you typically include it at the beginning of your C source file using #include like this:\par
+#include <stdio.h>\par
+\par
+
+\pard\sl360\slmult1\qj\f1\fs24 Q23. What will be the output of following program?\par
+
+\pard\li720\sl240\slmult1\qj #include<stdio.h>\par
+int main()\par
+\{   int num=070;\par
+printf(\ldblquote %d\\t%o\\t%x\rdblquote ,num,num,num);\par
+\}\par
+\f0\fs22\par
+\par
+ Ans - #include <stdio.h>\par
+\par
+int main() \{\par
+    int num = 070;\par
+    printf("%d\\t%o\\t%x", num, num, num);\par
+    return 0;\par
+\}\par
+\par
+\par
+Output -\par
+56    70    38\par
+\par
+\par
+
+\pard\sl360\slmult1\qj\f1\fs24 Q 24. What will be the output of following program?\par
+
+\pard\li720\sl240\slmult1\qj #include <stdio.h>\par
+
+\pard\fi720\sl240\slmult1\qj void main() \par
+\{\par
+int x = printf("GLA UNIVERSITY");\par
+
+\pard\sl240\slmult1\qj    \tab printf("%d", x);\par
+  \tab  \}\par
+
+\pard\li720\sl240\slmult1\qj\f0\fs22\par
+ Ans - GLA UNIVERSITY14\par
+It first prints "GLA UNIVERSITY" and then 14 immediately after.\par
+\par
+\par
+Q25. What are library functions? List any four library functions.\par
+\par
+\par
+Here are four commonly used library functions in C:\par
+\par
+1.printf():\par
+\par
+Purpose: Used for formatted output to the standard output (typically the console).\par
+Header: <stdio.h>\par
+Example:\par
+\par
+printf("Hello, World!\\n");\par
+\par
+2.scanf():\par
+\par
+Purpose: Used for formatted input from the standard input (typically the keyboard).\par
+Header: <stdio.h>\par
+Example:\par
+\par
+int num;\par
+scanf("%d", &num);\par
+\par
+3.strlen():\par
+\par
+Purpose: Calculates the length of a null-terminated string (number of characters excluding the null terminator).\par
+Header: <string.h>\par
+Example:\par
+\par
+#include <string.h>\par
+char str[] = "Hello";\par
+int length = strlen(str);\par
+\par
+4.rand() and srand():\par
+\par
+rand() Purpose: Generates a random integer.\par
+srand() Purpose: Seeds the random number generator.\par
+Header: <stdlib.h>\par
+Example:\par
+\par
+#include <stdlib.h>\par
+int randomNum;\par
+srand(time(NULL)); \par
+randomNum = rand(); \par
+\par
+\par
+
+\pard\sl360\slmult1\qj\f1\fs24 Q26. What will be the output of following program?\par
+
+\pard\li720\sl240\slmult1\qj #include <stdio.h>\par
+
+\pard\fi720\sl240\slmult1\qj void main() \par
+\{\par
+
+\pard\sl240\slmult1\qj  \tab   int x = printf("C is placement oriented Language") \f4\endash\f1  printf(\ldblquote Hi\rdblquote );\par
+ \tab   printf("%d %o %x", x,x,x);\par
+ \tab\}\par
+
+\pard\li720\sl240\slmult1\qj\f0\fs22\par
+\par
+#include <stdio.h>\par
+int main() \par
+\{\par
+  \f1\fs24\tab   int x = printf("C is placement oriented Language") \f4\endash\f1  printf(\ldblquote Hi\rdblquote );\f0\fs22   \par
+    printf("%d %o %x", x, x, x);\par
+\}\par
+\par
+output -\par
+31 37 1F\par
+\par
+
+\pard\sl360\slmult1\qj\f1\fs24 Q27. What is the meaning of following statement?    printf(\ldblquote %d\rdblquote ,scanf(\ldblquote %d%d\rdblquote ,&a,&b));\par
+
+\pard\li720\sl240\slmult1\qj\f0\fs22\par
+\par
+Ans - scanf("%d%d", &a, &b) is a call to the scanf function, which is used for reading input from the standard input (usually the keyboard) and storing it in the variables a and b. It expects two integer values to be entered, separated by whitespace.\par
+\par
+Here's a common usage of scanf return value for input error checking:\par
+\par
+\par
+if (scanf("%d%d", &a, &b) == 2) \{\par
+    \par
+    printf("Values read: a = %d, b = %d\\n", a, b);\par
+\} else \{\par
+    \par
+    printf("Error: Input should consist of two integers.\\n");\par
+\}\par
+\par
+\par
+
+\pard\sl360\slmult1\qj\f1\fs24 Q28. What will be the output of following program?\par
+
+\pard\li720\sl240\slmult1\qj #include <stdio.h> \par
+void main() \par
+
+\pard\fi720\sl240\slmult1\qj\{ \par
+  printf(" \\"C %% FOR %% PLACEMENT\\""); \par
+\}\par
+
+\pard\li720\sl240\slmult1\qj\f0\fs22\par
+\par
+\par
+#include <stdio.h>\par
+\par
+void main() \{\par
+    printf(" \\"C %% FOR %% PLACEMENT\\"");\par
+\}\par
+\par
+output -\par
+ "C % FOR % PLACEMENT"\par
+\par
+
+\pard\sl360\slmult1\qj\f1\fs24 Q29. Suppose distance between GLA University and Delhi is m km (to be entered by user), by BUS you can reach Delhi in 4 hours. Develop a \lquote C\rquote  program to calculate speed of bus.\par
+Answer: \par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    float distance;\par
+    float time = 4.0;\par
+    float speed;\par
+\par
+    printf("Enter the distance between GLA University and Delhi in kilometers: ");\par
+    scanf("%f", &distance);\par
+\par
+    speed = distance / time;\par
+\par
+    printf("The speed of the bus is %.2f km/h.\\n", speed);\par
+\par
+    return 0;\par
+\}\par
+Q30. In an exam Satyam got 50 marks, Suman got 70 marks and Shyam got 80 marks, Write a \lquote C\rquote  program to find average marks of these three participants.\par
+
+\pard\sl240\slmult1 Answer: \cf1\f5 Certainly! Here\rquote s a \lquote C\rquote  program that calculates the average marks of Satyam, Suman, and Shyam:\par
+
+\pard\sa60\sl240\slmult1\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\f6\fs20 #include <stdio.h>\par
+\par
+int main() \{\par
+    int satyam_marks = 50;\par
+    int suman_marks = 70;\par
+    int shyam_marks = 80;\par
+    float average;\par
+\par
+    average = (satyam_marks + suman_marks + shyam_marks) / 3.0;\par
+\par
+    printf("The average marks of Satyam, Suman, and Shyam is %.2f.\\n", average);\par
+\par
+    return 0;\par
+\}\par
+
+\pard\sl240\slmult1\f5\fs24 Copy\par
+In this program, we first declare three variables\~\f6\fs20 satyam_marks\f5\fs24 ,\~\f6\fs20 suman_marks\f5\fs24 , and\~\f6\fs20 shyam_marks\f5\fs24\~to store the marks obtained by Satyam, Suman, and Shyam, respectively. We also declare a variable\~\f6\fs20 average\f5\fs24\~to store the calculated average.\par
+
+\pard\sb180\sl240\slmult1 We then calculate the average marks by adding the marks of the three participants and dividing the sum by 3.0 to get a floating-point result.\par
+
+\pard\sl360\slmult1\qj\cf0\f1\par
+Q31. One day, Mohan called Saurav and Sajal and gave some money to them, later he realized that money that was given to Saurav should be given to Sajal and vice-versa. Develop a \lquote C\rquote  program to help Mohan so that he can rectify his mistake.\par
+\par
+
+\pard\sl240\slmult1 Answer:\cf1\f5  To rectify the mistake made by Mohan, we can use a temporary variable to swap the values of the two variables. Here\rquote s a C program that does this:\par
+
+\pard\sa60\sl240\slmult1\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\f6\fs20 #include <stdio.h>\par
+\par
+int main() \{\par
+    int saurav_money = 100;\par
+    int sajal_money = 200;\par
+    int temp;\par
+\par
+    printf("Before swapping:\\n");\par
+    printf("Saurav has %d rupees.\\n", saurav_money);\par
+    printf("Sajal has %d rupees.\\n", sajal_money);\par
+\par
+    // Swap the values of the two variables\par
+    temp = saurav_money;\par
+    saurav_money = sajal_money;\par
+    sajal_money = temp;\par
+\par
+    printf("\\nAfter swapping:\\n");\par
+    printf("Saurav has %d rupees.\\n", saurav_money);\par
+    printf("Sajal has %d rupees.\\n", sajal_money);\par
+\par
+    return 0;\par
+\}\par
+
+\pard\sl240\slmult1\f5\fs24 Copy\par
+In this program, we first declare two variables\~\f6\fs20 saurav_money\f5\fs24\~and\~\f6\fs20 sajal_money\f5\fs24\~to store the amount of money given to Saurav and Sajal, respectively. We also declare a temporary variable\~\f6\fs20 temp\f5\fs24 .\par
+We then print out the initial values of the two variables using\~\f6\fs20 printf()\f5\fs24 .\par
+To swap the values of the two variables, we first assign the value of\~\f6\fs20 saurav_money\f5\fs24\~to\~\f6\fs20 temp\f5\fs24 . We then assign the value of\~\f6\fs20 sajal_money\f5\fs24\~to\~\f6\fs20 saurav_money\f5\fs24 , and finally assign the value of\~\f6\fs20 temp\f5\fs24\~to\~\f6\fs20 sajal_money\f5\fs24 . This effectively swaps the values of the two variables.\par
+Finally, we print out the new values of the two variables using\~\f6\fs20 printf()\f5\fs24 .\par
+
+\pard\sb180\sl240\slmult1 I hope this helps Mohan rectify his mistake!\par
+
+\pard\sl360\slmult1\qj\cf0\f1\par
+Q32. One day when I was going for a lunch, suddenly rain started, I was very hungry so started running with speed of 4km/h and it took 3 min to reach mess. Help me to develop a \lquote C\rquote  program to calculate distance travelled by me.\line\par
+
+\pard\sl240\slmult1 Answer:\par
+ \cf1\f5 To calculate the distance travelled by you, we can use the formula:\par
+
+\pard\sa60\sl240\slmult1\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\f6\fs20 distance = speed x time\par
+
+\pard\sl240\slmult1\f5\fs24 Copy\par
+where\~\f6\fs20 speed\f5\fs24\~is your running speed in km/h and\~\f6\fs20 time\f5\fs24\~is the time taken to reach the mess in hours.\par
+
+\pard\sb180\sl240\slmult1 Given that you ran at a speed of 4 km/h and it took you 3 minutes (0.05 hours) to reach the mess, we can calculate the distance travelled as:\par
+
+\pard\sa60\sl240\slmult1\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\f6\fs20 distance = 4 x 0.05\par
+
+\pard\sl240\slmult1\f5\fs24 Copy\par
+
+\pard\sb180\sl240\slmult1 Therefore, the distance travelled by you is\~\b 0.2 km\b0 .\par
+Here\rquote s a C program that calculates the distance travelled:\par
+
+\pard\sa60\sl240\slmult1\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\f6\fs20 #include <stdio.h>\par
+\par
+int main() \{\par
+    float speed = 4; // km/h\par
+    float time = 0.05; // hours\par
+    float distance = speed * time;\par
+\par
+    printf("The distance travelled by you is %.2f km.", distance);\par
+\par
+    return 0;\par
+\}\par
+
+\pard\sl360\slmult1\qj\cf0\f1\fs24\par
+Q33. Can two or more escape sequences such as \\n and \\t be combined in a single line of program code?\par
+
+\pard\sl240\slmult1 Answer: \cf1\f5 Yes, it is possible to combine two or more escape sequences such as\~\f6\fs20\\n\f5\fs24\~and\~\f6\fs20\\t\f5\fs24\~in a single line of program code in C. For example, the following code will print \ldblquote Hello\rdblquote  on one line, followed by a tab character, and then \ldblquote World\rdblquote  on the next line:\par
+
+\pard\sa60\sl240\slmult1\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\f6\fs20 printf("Hello\\tWorld\\n");\par
+
+\pard\sl240\slmult1\f5\fs24 Copy\par
+In this example, the\~\f6\fs20\\t\f5\fs24\~escape sequence inserts a tab character between \ldblquote Hello\rdblquote  and \ldblquote World\rdblquote , and the\~\f6\fs20\\n\f5\fs24\~escape sequence moves the cursor to the next line.\par
+
+\pard\sb180\sl240\slmult1 Therefore, it is possible to combine multiple escape sequences in a single line of program code in C.\par
+
+\pard\sl360\slmult1\qj\cf0\f1\par
+\par
+Q34. What are comments and how do you insert it in a C program?\par
+
+\pard\sl240\slmult1 Answer: \cf1\f5 In C programming,\~\b comments\b0\~are used to add notes or explanations to the code. They are ignored by the compiler and do not affect the execution of the program.\par
+
+\pard\sb180\sl240\slmult1 There are two types of comments in C:\par
+
+\pard{\pntext\f8\'B7\tab}{\*\pn\pnlvlblt\pnf8\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx720\b Single-line comments\b0 : These comments start with\~\f6\fs20 //\f5\fs24\~and continue until the end of the line. They are used to add a short note or explanation to a single line of code.\par
+{\pntext\f8\'B7\tab}\b Multi-line comments\b0 : These comments start with\~\f6\fs20 /*\f5\fs24\~and end with\~\f6\fs20 */\f5\fs24 . They can span multiple lines and are used to add longer notes or explanations to a block of code.\par
+
+\pard\sb180\sl240\slmult1 Here are some examples of how to use comments in C:\par
+
+\pard\sa60\sl240\slmult1\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\f6\fs20 // This is a single-line comment\par
+\par
+int main() \{\par
+    /* This is a multi-line comment\par
+       that spans multiple lines */\par
+    return 0;\par
+\}\par
+
+\pard\sl240\slmult1\f5\fs24 Copy\par
+To insert a comment in a C program, simply add\~\f6\fs20 //\f5\fs24\~or\~\f6\fs20 /* ... */\f5\fs24\~before the text you want to comment.\par
+
+\pard\sl360\slmult1\qj\cf0\f1 B\par
+\par
+
+\pard\sl240\slmult1 Q35. What is wrong in this statement?  scanf(\ldblquote %d\rdblquote ,number);\line Answer: \cf1\f5 The statement\~\f6\fs20 scanf(\ldblquote %d\rdblquote ,number);\f5\fs24\~is incorrect because the\~\f6\fs20 scanf()\f5\fs24\~function requires the address of the variable where the input value will be stored, not the variable itself.\par
+To fix this error, we need to pass the address of the variable\~\f6\fs20 number\f5\fs24\~to\~\f6\fs20 scanf()\f5\fs24\~using the\~\f6\fs20 &\f5\fs24\~operator. Here\rquote s the corrected statement:\par
+
+\pard\sa60\sl240\slmult1\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\f6\fs20 scanf("%d", &number);\par
+
+\pard\sl240\slmult1\f5\fs24 Copy\par
+Therefore, the correct statement should be\~\f6\fs20 scanf("%d", &number);\f5\fs24 .\par
+
+\pard\sl360\slmult1\qj\cf0\f1\par
+
+\pard\sl240\slmult1\qj Q36. What will be the output?\par
+\par
+
+\pard\fi1170\sl240\slmult1\qj #include <stdio.h>\par
+
+\pard\fi1170\li360\sl240\slmult1\qj int main()\par
+
+\pard\fi1170\sl240\slmult1\qj\{\par
+    if (sizeof(int) > -1)\par
+        printf("Yes");\par
+    else\par
+        printf("No");\par
+    return 0;\par
+\}\par
+\par
+
+\pard\sl240\slmult1 Answer: \cf1\f5 The output of the program will be\~\b Yes\b0 .\par
+In C, the\~\f6\fs20 sizeof\f5\fs24\~operator returns the size of a data type in bytes.\~{\cf2\ul{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/34151309/why-is-sizeofint-1-false"}}{\fldrslt{The result of\~}}}}{\cf2\ul\f6\fs20{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/34151309/why-is-sizeofint-1-false"}}{\fldrslt{sizeof}}}}{\cf1\ulnone\f5\fs24{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/34151309/why-is-sizeofint-1-false"}}{\fldrslt{\ul\cf2\cf2\ul\~is an unsigned integer of type\~}}}}{\cf1\ulnone\f6\fs20{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/34151309/why-is-sizeofint-1-false"}}{\fldrslt{\ul\cf2\cf2\ul size_t}}}}{\cf1\ulnone\f5\fs24{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/34151309/why-is-sizeofint-1-false"}}{\fldrslt{\ul\cf2\cf2\ul , which is always non-negative\~}}}}{\cf1\ulnone\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/34151309/why-is-sizeofint-1-false"}}{\fldrslt{\ul\cf2\cf2\ul 1}}}}\cf1\ulnone\f5\fs24 .\par
+In the given program, the expression\~\f6\fs20 sizeof(int) > -1\f5\fs24\~is equivalent to\~\f6\fs20 sizeof(int) > (unsigned int)-1\f5\fs24 . Since\~\f6\fs20 -1\f5\fs24\~is converted to an unsigned integer before the comparison, it becomes a very large number that is greater than the size of an integer on most implementations. Therefore, the condition in the\~\f6\fs20 if\f5\fs24\~statement is true, and the program prints \ldblquote Yes\rdblquote  to the console.\par
+
+\pard\sb180\sl240\slmult1 Therefore, the output of the program will be\~\b Yes\b0 .\par
+
+\pard\fi1170\sl240\slmult1\qj\cf0\f1\par
+
+\pard\sl240\slmult1\qj Q37. Point out which of the following variable names are invalid: \par
+
+\pard\li360\sl240\slmult1\qj gross-salary INTEREST , salary of emp , avg. , thereisbookinmysoup\par
+
+\pard\sl240\slmult1 Answer: \cf1\f5 Out of the given variable names,\~\b gross-salary\b0\~and\~\b thereisbookinmysoup\b0\~are invalid because they contain hyphens and spaces, respectively. Variable names in C must not contain hyphens or spaces. Instead, we can use underscores to separate words in a variable name.\par
+
+\pard\sb180\sl240\slmult1 The other two variable names,\~\b salary of emp\b0\~and\~\b avg.\b0 , are also invalid. Variable names in C must not contain spaces or periods. Instead, we can use underscores to separate words in a variable name.\par
+Therefore, the correct answer is:\~\b gross-salary\b0\~and\~\b thereisbookinmysoup\b0 .\par
+
+\pard\li360\sl240\slmult1\qj\cf0\f1\par
+\par
+
+\pard\sl360\slmult1\qj Q38. Tom works at an aquarium shop on Saturdays. One Saturday, when Tom gets to work, he is asked to clean a 175-gallon reef tank. His first job is to drain the tank. He puts a hose into the tank and starts a siphon. Tom wonders if the tank will finish draining before he leaves work. He measures the amount of water that is draining out and finds that 12.5 gallons drain out in 30 minutes. So, he figures that the rate is 25 gallons per hour. Develop a \lquote C\rquote  program to help Tom to calculate time required to completely clean tank.\par
+\par
+Answer: \par
+#include <stdio.h>\par
+\par
+int main() \{\par
+    float total_amount_of_water = 175;\par
+    float rate_of_drainage = 25;\par
+    float time = total_amount_of_water / rate_of_drainage;\par
+\par
+    printf("The time required to completely clean the tank is approximately %.2f hours.", time);\par
+\par
+    return 0;\par
+\}\par
+
+\pard\sl240\slmult1\qj Q39. The percent y (in decimal form) of battery power remaining x hours after you turn on a laptop computer is y = \f7\u8722?\f1 0.2 x + 1. Develop a \lquote C\rquote  program to calculate after how many hours the battery power is at 75%?\par
+\lang9\par
+Answer:\par
+ #include <stdio.h>\par
+\par
+int main() \{\par
+    float x = (1 - 0.75) / (-0.2);\par
+    printf("The battery power will be at 75%% after %.2f hours.", x);\par
+    return 0;\par
+\}\par
+\par
+Q40.Which of the following is used to convert the high level language in machine language in a single go?\par
+a. Compiler\tab\tab b.Interpreter \par
+c. Linker\tab\tab d.Assembler \par
+\par
+
+\pard\sl240\slmult1 Answer: {\cf2\ul\f5{\field{\*\fldinst{HYPERLINK "https://www.bbc.co.uk/bitesize/guides/zmthsrd/revision/1"}}{\fldrslt{The tool used to convert high-level language into machine language in a single go is a\~}}}}{\cf2\b\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.bbc.co.uk/bitesize/guides/zmthsrd/revision/1"}}{\fldrslt{\ul\cf2\ul compiler}}}}{\cf0\ulnone\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.bbc.co.uk/bitesize/guides/zmthsrd/revision/1"}}{\fldrslt{\ul\cf2\cf2\ul\~}}}}{\cf0\ulnone\super\b0\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.bbc.co.uk/bitesize/guides/zmthsrd/revision/1"}}{\fldrslt{\ul\cf2\cf2\ul 1}}}}{\cf0\ulnone\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/language-processors-assembler-compiler-and-interpreter/"}}{\fldrslt{\ul\cf2\cf2\ul 2}}}}{\cf0\ulnone\nosupersub\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.thegeeksclan.com/program-translator-tools/"}}{\fldrslt{\ul\cf2\cf2\ul 3}}}}\cf1\ulnone\nosupersub\f5\fs24 .\par
+A\~\b compiler\b0\~is a program that takes the entire source code of a program written in a high-level language and translates it into machine code all at once.\~{\cf2\ul{\field{\*\fldinst{HYPERLINK "https://www.bbc.co.uk/bitesize/guides/zmthsrd/revision/1"}}{\fldrslt{The resulting machine code can be executed directly on the target computer without any further processing\~}}}}{\cf2\ul\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.bbc.co.uk/bitesize/guides/zmthsrd/revision/1"}}{\fldrslt{1}}}}{\cf1\ulnone\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/language-processors-assembler-compiler-and-interpreter/"}}{\fldrslt{\ul\cf2\cf2\ul 2}}}}{\cf1\ulnone\nosupersub\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.thegeeksclan.com/program-translator-tools/"}}{\fldrslt{\ul\cf2\cf2\ul 3}}}}\cf1\ulnone\nosupersub\f5\fs24 .\par
+On the other hand, an\~\b interpreter\b0\~translates and executes the source code of a program line by line, without generating an executable file.\~{\cf2\ul{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/19506164/what-is-the-process-of-translating-high-level-language-into-machine-language"}}{\fldrslt{This means that the source code must be interpreted every time the program is run, which can make it slower than compiled code\~}}}}{\cf2\ul\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/19506164/what-is-the-process-of-translating-high-level-language-into-machine-language"}}{\fldrslt{4}}}}\cf1\ulnone\f5\fs24 .\par
+A\~\b linker\b0\~is a program that combines object files generated by a compiler into a single executable file.\~{\cf2\ul{\field{\*\fldinst{HYPERLINK "https://edurev.in/question/1834941/Which-among-these-language-translators-that-can-convert-high-level-language-program-into-machine-lan"}}{\fldrslt{It resolves references between different object files and libraries, and generates an executable file that can be run on the target computer\~}}}}{\cf2\ul\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://edurev.in/question/1834941/Which-among-these-language-translators-that-can-convert-high-level-language-program-into-machine-lan"}}{\fldrslt{5}}}}\cf1\ulnone\f5\fs24 .\par
+
+\pard\sb180\sl240\slmult1 An\~\b assembler\b0\~is a program that translates assembly language into machine code. Assembly language is a low-level programming language that is easier to read and write than machine code, but still requires detailed knowledge of the underlying hardware architecture .\par
+Therefore, the correct answer is\~\b a. Compiler\b0 .\par
+
+\pard\sl240\slmult1\qj\cf0\f1\par
+\par
+Q 41. What is the format specifier for an Octal Number?\par
+a.%0\tab  \tab b.%d \par
+c. %o\tab\tab d. %e\par
+\par
+
+\pard\sl240\slmult1 Answer: \cf1\f5 The format specifier for an octal number is\~\b %o\b0 .\par
+{\cf2\ul{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/octal-numbers-c/"}}{\fldrslt{In C, the\~}}}}{\cf2\ul\f6\fs20{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/octal-numbers-c/"}}{\fldrslt{%o}}}}{\cf1\ulnone\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/octal-numbers-c/"}}{\fldrslt{\ul\cf2\cf2\ul\~format specifier is used to print an integer in octal (base 8) format\~}}}}{\cf1\ulnone\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/octal-numbers-c/"}}{\fldrslt{\ul\cf2\cf2\ul 1}}}}{\cf1\ulnone\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.includehelp.com/c/octal-literals.aspx"}}{\fldrslt{\ul\cf2\cf2\ul 2}}}}\cf1\ulnone\nosupersub\f5\fs24 . To print an integer in octal format, we can use the following syntax:\par
+
+\pard\sa60\sl240\slmult1\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\f6\fs20 printf("%o", num);\par
+
+\pard\sl240\slmult1\f5\fs24 Copy\par
+where\~\f6\fs20 num\f5\fs24\~is the integer to be printed in octal format.\par
+
+\pard\sb180\sl240\slmult1 Therefore, the correct answer is\~\b c. %o\b0 .\par
+
+\pard\sl240\slmult1\qj\cf0\f1\par
+\par
+Q 42. Which format specifier is used to print the exponent value upto 2 decimal places.\par
+a. %e\tab b.%.2f \tab c. %f\tab\tab d.%.2e \par
+\par
+
+\pard\sl240\slmult1 Answer: \cf1\f5 The format specifier used to print the exponent value up to 2 decimal places is\~\b d.%.2e\b0 .\par
+{\cf2\ul{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/format-specifiers-in-c/"}}{\fldrslt{The\~}}}}{\cf2\ul\f6\fs20{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/format-specifiers-in-c/"}}{\fldrslt{%e}}}}{\cf1\ulnone\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/format-specifiers-in-c/"}}{\fldrslt{\ul\cf2\cf2\ul\~format specifier is used to print a floating-point number in scientific notation with an exponent\~}}}}{\cf1\ulnone\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.geeksforgeeks.org/format-specifiers-in-c/"}}{\fldrslt{\ul\cf2\cf2\ul 1}}}}\cf1\ulnone\f5\fs24 .\~{\cf2\ul{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/2538787/how-to-print-a-float-with-2-decimal-places-in-java"}}{\fldrslt{To print the exponent value up to 2 decimal places, we can use the precision specifier\~}}}}{\cf2\ul\f6\fs20{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/2538787/how-to-print-a-float-with-2-decimal-places-in-java"}}{\fldrslt{.2}}}}{\cf1\ulnone\f5\fs24{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/2538787/how-to-print-a-float-with-2-decimal-places-in-java"}}{\fldrslt{\ul\cf2\cf2\ul\~along with\~}}}}{\cf1\ulnone\f6\fs20{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/2538787/how-to-print-a-float-with-2-decimal-places-in-java"}}{\fldrslt{\ul\cf2\cf2\ul %e}}}}{\cf1\ulnone\f5\fs24{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/2538787/how-to-print-a-float-with-2-decimal-places-in-java"}}{\fldrslt{\ul\cf2\cf2\ul , like this:\~}}}}{\cf1\ulnone\f6\fs20{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/2538787/how-to-print-a-float-with-2-decimal-places-in-java"}}{\fldrslt{\ul\cf2\cf2\ul %.2e}}}}{\cf1\ulnone\f5\fs24{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/2538787/how-to-print-a-float-with-2-decimal-places-in-java"}}{\fldrslt{\ul\cf2\cf2\ul\~}}}}{\cf1\ulnone\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://stackoverflow.com/questions/2538787/how-to-print-a-float-with-2-decimal-places-in-java"}}{\fldrslt{\ul\cf2\cf2\ul 2}}}}\cf1\ulnone\f5\fs24 .\par
+
+\pard\sb180\sl240\slmult1 Therefore, the correct answer is\~\b d.%.2e\b0 .\par
+
+\pard\sl240\slmult1\qj\cf0\f1\par
+\par
+Q 43. Which of the following is not a basic data type?\par
+a. char\par
+b. array\par
+c. float\tab\par
+d. int\par
+
+\pard\sl240\slmult1 Answer: {\cf2\ul\f5{\field{\*\fldinst{HYPERLINK "https://press.rebus.community/programmingfundamentals/chapter/data-types/"}}{\fldrslt{A\~}}}}{\cf2\b\f5\fs24{\field{\*\fldinst{HYPERLINK "https://press.rebus.community/programmingfundamentals/chapter/data-types/"}}{\fldrslt{\ul\cf2\ul data type}}}}{\cf0\ulnone\f5\fs24{\field{\*\fldinst{HYPERLINK "https://press.rebus.community/programmingfundamentals/chapter/data-types/"}}{\fldrslt{\ul\cf2\cf2\ul\~is a classification of data that tells the compiler or interpreter how the programmer intends to use the data\~}}}}{\cf0\ulnone\super\b0\f5\fs24{\field{\*\fldinst{HYPERLINK "https://press.rebus.community/programmingfundamentals/chapter/data-types/"}}{\fldrslt{\ul\cf2\cf2\ul 1}}}}\cf1\ulnone\f5\fs24 .\par
+Out of the given options,\~\b array\b0\~is not a basic data type.\~{\cf2\ul{\field{\*\fldinst{HYPERLINK "https://www.toppr.com/guides/computer-science/introduction-to-c-/data-types-variables-and-constants/concept-of-data-types/"}}{\fldrslt{An\~}}}}{\cf2\b\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.toppr.com/guides/computer-science/introduction-to-c-/data-types-variables-and-constants/concept-of-data-types/"}}{\fldrslt{\ul\cf2\ul array}}}}{\cf1\ulnone\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.toppr.com/guides/computer-science/introduction-to-c-/data-types-variables-and-constants/concept-of-data-types/"}}{\fldrslt{\ul\cf2\cf2\ul\~is a collection of elements of the same type, such as a collection of integers or characters\~}}}}{\cf1\ulnone\super\b0\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.toppr.com/guides/computer-science/introduction-to-c-/data-types-variables-and-constants/concept-of-data-types/"}}{\fldrslt{\ul\cf2\cf2\ul 2}}}}\cf1\ulnone\f5\fs24 . It is a compound data type that can be built using basic data types.\par
+
+\pard\sb180\sl240\slmult1 On the other hand,\~\b char\b0 ,\~\b float\b0 , and\~\b int\b0\~are all examples of basic data types.\par
+
+\pard{\pntext\f8\'B7\tab}{\*\pn\pnlvlblt\pnf8\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl240\slmult1\tx720 {\cf2\b{\field{\*\fldinst{HYPERLINK "https://www.toppr.com/guides/computer-science/introduction-to-c-/data-types-variables-and-constants/concept-of-data-types/"}}{\fldrslt{\ul\cf2\ul char}}}}{\cf2\ul\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.toppr.com/guides/computer-science/introduction-to-c-/data-types-variables-and-constants/concept-of-data-types/"}}{\fldrslt{\~represents individual characters\~}}}}{\cf1\ulnone\super\b0\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.toppr.com/guides/computer-science/introduction-to-c-/data-types-variables-and-constants/concept-of-data-types/"}}{\fldrslt{\ul\cf2\cf2\ul 2}}}}\cf1\ulnone\f5\fs24 .\par
+{\pntext\f8\'B7\tab}{\cf2\b{\field{\*\fldinst{HYPERLINK "https://www.toppr.com/guides/computer-science/introduction-to-c-/data-types-variables-and-constants/concept-of-data-types/"}}{\fldrslt{\ul\cf2\ul float}}}}{\cf2\ul\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.toppr.com/guides/computer-science/introduction-to-c-/data-types-variables-and-constants/concept-of-data-types/"}}{\fldrslt{\~represents fractional numbers\~}}}}{\cf1\ulnone\super\b0\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.toppr.com/guides/computer-science/introduction-to-c-/data-types-variables-and-constants/concept-of-data-types/"}}{\fldrslt{\ul\cf2\cf2\ul 2}}}}\cf1\ulnone\f5\fs24 .\par
+{\pntext\f8\'B7\tab}{\cf2\b{\field{\*\fldinst{HYPERLINK "https://press.rebus.community/programmingfundamentals/chapter/data-types/"}}{\fldrslt{\ul\cf2\ul int}}}}{\cf2\ul\f5\fs24{\field{\*\fldinst{HYPERLINK "https://press.rebus.community/programmingfundamentals/chapter/data-types/"}}{\fldrslt{\~represents whole numbers\~}}}}{\cf1\ulnone\super\b0\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.toppr.com/guides/computer-science/introduction-to-c-/data-types-variables-and-constants/concept-of-data-types/"}}{\fldrslt{\ul\cf2\cf2\ul 2}}}}\cf1\ulnone\f5\fs24 .\par
+
+\pard\sb180\sl240\slmult1 Therefore, the correct answer is\~\b b. array\b0 .\par
+
+\pard\sl240\slmult1\qj\cf0\f1\par
+\par
+Q 44. What is the output of following code?\par
+#include<stdio.h>\par
+void main()\par
+\{\par
+  int x=0;\par
+  x= printf("\\"hello\\b\\"");\par
+  printf(\ldblquote %d\rdblquote ,x);\par
+\}\par
+a. hello7     b. \ldblquote hello\rdblquote 7\tab  c. \ldblquote hell\rdblquote 8      d. hell8\par
+\par
+\par
+
+\pard\sl240\slmult1 Answer: \cf1\f5 The output of the program will be\~\b hello7\b0 .\par
+The first\~\f6\fs20 printf()\f5\fs24\~statement in the program prints the string\~\f6\fs20 "hello"\f5\fs24\~to the console and then moves the cursor back one position using the backspace escape sequence\~\f6\fs20\\b\f5\fs24 . This means that the letter\~\f6\fs20 o\f5\fs24\~is overwritten by the double quote\~\f6\fs20 "\f5\fs24 , resulting in the output\~\f6\fs20 hell"\f5\fs24 . However, since we are using double quotes to enclose the string, we need to escape them using a backslash\~\f6\fs20\\\f5\fs24 . Therefore, the correct string to print is\~\f6\fs20 "hell\\""\f5\fs24 .\par
+The\~\f6\fs20 printf()\f5\fs24\~function returns the number of characters printed, which is\~\f6\fs20 7\f5\fs24\~in this case. This value is then assigned to the variable\~\f6\fs20 x\f5\fs24 .\par
+The second\~\f6\fs20 printf()\f5\fs24\~statement in the program prints the value of\~\f6\fs20 x\f5\fs24\~to the console, which is\~\f6\fs20 7\f5\fs24 .\par
+
+\pard\sb180\sl240\slmult1 Therefore, the complete output of the program is\~\b hello7\b0 .\par
+
+\pard\sl240\slmult1\qj\cf0\f1\par
+    \par
+Q 45.  What is the output of following code?\par
+#include<stdio.h>\par
+void main()\par
+\{\par
+  int b,c=5 ;\par
+  int(\ldblquote %d , %d\rdblquote , b,c);\par
+\}\par
+a. 5, 5\tab\tab\tab   b. 5, 5.000000\tab\par
+c. Garbage, 5.000000       d. Garbage, 5\par
+\par
+Answer:\par
+ #include <stdio.h>\par
+\par
+int main() \{\par
+    int b, c = 5;\par
+    printf("%d, %d", b, c);\par
+    return 0;\par
+\}\par
+\par
+\par
+Q46. Which of the following is an identifier?\par
+a. &fact      b. Basic_pay    c. enum         d. 1sum \par
+\par
+
+\pard\sl240\slmult1 Answer: \cf1\f5 An\~\b identifier\b0\~is a name given to entities such as variables, functions, structures, etc.\~{\cf2\ul{\field{\*\fldinst{HYPERLINK "https://www.programiz.com/c-programming/c-keywords-identifier"}}{\fldrslt{that are created to give a unique name to an entity to identify it during the execution of the program\~}}}}{\cf2\ul\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.programiz.com/c-programming/c-keywords-identifier"}}{\fldrslt{1}}}}{\cf1\ulnone\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Identifier_%28computer_languages%29"}}{\fldrslt{\ul\cf2\cf2\ul 2}}}}{\cf1\ulnone\nosupersub\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.thoughtco.com/definition-of-identifier-958092"}}{\fldrslt{\ul\cf2\cf2\ul 3}}}}{\cf1\ulnone\nosupersub\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.techopedia.com/definition/1810/identifier-c"}}{\fldrslt{\ul\cf2\cf2\ul 4}}}}\cf1\ulnone\f5\fs24 .\par
+Out of the given options,\~\b Basic_pay\b0\~and\~\b enum\b0\~are identifiers because they follow the rules for naming identifiers. Identifiers can have letters (both uppercase and lowercase letters), digits, and underscores. The first letter of an identifier should be either a letter or an underscore. You cannot use keywords like\~\f6\fs20 int\f5\fs24 ,\~\f6\fs20 while\f5\fs24 , etc.\~{\cf2\ul{\field{\*\fldinst{HYPERLINK "https://www.programiz.com/c-programming/c-keywords-identifier"}}{\fldrslt{as identifiers\~}}}}{\cf2\ul\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.programiz.com/c-programming/c-keywords-identifier"}}{\fldrslt{1}}}}{\cf1\ulnone\super\f5\fs24{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Identifier_%28computer_languages%29"}}{\fldrslt{\ul\cf2\cf2\ul 2}}}}{\cf1\ulnone\nosupersub\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.thoughtco.com/definition-of-identifier-958092"}}{\fldrslt{\ul\cf2\cf2\ul 3}}}}{\cf1\ulnone\nosupersub\f5\fs24{\field{\*\fldinst{HYPERLINK "https://www.techopedia.com/definition/1810/identifier-c"}}{\fldrslt{\ul\cf2\cf2\ul 4}}}}\cf1\ulnone\f5\fs24 .\par
+
+\pard\sb180\sl240\slmult1 Therefore, the correct options are\~\b b. Basic_pay\b0\~and\~\b c. enum\b0 .\par
+
+\pard\sl240\slmult1\qj\cf0\f1\par
+\par
+Q 47. What is the output of the following program?\par
+#include<stdio.h>   char x, a=\rquote c\rquote ;\par
+   x=printf("%c",a);\par
+\par
+void main()\par
+\{\par
+   printf(\ldblquote %d\rdblquote ,x);\par
+\}\par
+a. c1\tab\tab b. cgarbage\par
+c. 1\tab\tab c. c\par
+\par
+answer: \cf1\f5 The output of the program will be\~\b c1\b0 .\cf0\f1\par
+
+\pard\sl360\slmult1\qj\par
+Q48. Perform the following conversion from Decimal to other number as directed-\par
+
+\pard{\pntext\f8\'B7\tab}{\*\pn\pnlvlblt\pnf8\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl360\slmult1\qj\tx720 (365.55)\sub 10\nosupersub  =  (?)\sub 2\nosupersub\par
+{\pntext\f8\'B7\tab}(453.65)\sub 10\nosupersub  =  (?)\sub 8\nosupersub\par
+{\pntext\f8\'B7\tab}(5164.12)\sub 10\nosupersub  = (?)\sub 16\nosupersub\par
+{\pntext\f8\'B7\tab}(23.65)\sub 10\nosupersub  =  (?)\sub 5\nosupersub\par
+{\pntext\f8\'B7\tab}(772)\sub 10\nosupersub  =       (?)\sub 7\nosupersub\par
+
+\pard\sl360\slmult1\qj\tx720\par
+\sub Ans - #include <stdio.h>\par
+\par
+void decimalToBinary(double num) \{\par
+    int intPart = (int)num;\par
+    double decimalPart = num - intPart;\par
+\par
+    int binaryInt[32]; \par
+    int i = 0;\par
+    while (intPart > 0) \{\par
+        binaryInt[i] = intPart % 2;\par
+        intPart /= 2;\par
+        i++;\par
+    \}\par
+    \par
+    printf("Integer part in binary: ");\par
+    for (int j = i - 1; j >= 0; j--) \{\par
+        printf("%d", binaryInt[j]);\par
+    \}\par
+    printf(".");\par
+    while (decimalPart != 0.0) \{\par
+        decimalPart *= 2;\par
+        int bit = (int)decimalPart;\par
+        decimalPart -= bit;\par
+        printf("%d", bit);\par
+    \}\par
+    printf("\\n");\par
+\}\par
+\par
+int main() \{\par
+    double num = 365.55;\par
+    decimalToBinary(num);\par
+    return 0;\par
+\}\par
+Decimal to Octal (Base-8):\par
+(453.65)10 = (?)8\par
+\par
+#include <stdio.h>\par
+\par
+void decimalToOctal(double num) \{\par
+    int intPart = (int)num;\par
+    double decimalPart = num - intPart;\par
+\par
+    \par
+    printf("Integer part in octal: %o\\n", intPart);\par
+\par
+    \par
+    printf("Decimal part in octal: 0.");\par
+    for (int i = 0; i < 5; i++) \{ // Display up to 5 digits in the fractional part\par
+        decimalPart *= 8;\par
+        int digit = (int)decimalPart;\par
+        decimalPart -= digit;\par
+        printf("%d", digit);\par
+    \}\par
+    printf("\\n");\par
+\}\par
+\par
+int main() \{\par
+    double num = 453.65;\par
+    decimalToOctal(num);\par
+    return 0;\par
+\}\par
+Decimal to Hexadecimal (Base-16):\par
+(5164.12)10 = (?)16\par
+\par
+#include <stdio.h>\par
+\par
+void decimalToHexadecimal(double num) \{\par
+    int intPart = (int)num;\par
+    double decimalPart = num - intPart;\par
+\par
+    printf("Integer part in hexadecimal: %X\\n", intPart);\par
+\par
+    printf("Decimal part in hexadecimal: 0.");\par
+    for (int i = 0; i < 5; i++) \{ // Display up to 5 digits in the fractional part\par
+        decimalPart *= 16;\par
+        int digit = (int)decimalPart;\par
+        decimalPart -= digit;\par
+        printf("%X", digit);\par
+    \}\par
+    printf("\\n");\par
+\}\par
+\par
+int main() \{\par
+    double num = 5164.12;\par
+    decimalToHexadecimal(num);\par
+    return 0;\par
+\}\par
+Decimal to Base-5:\par
+(23.65)10 = (?)5\par
+\par
+#include <stdio.h>\par
+\par
+void decimalToBase5(double num) \{\par
+    int intPart = (int)num;\par
+    double decimalPart = num - intPart;\par
+\par
+    printf("Integer part in base-5: ");\par
+    while (intPart > 0) \{\par
+        int digit = intPart % 5;\par
+        printf("%d", digit);\par
+        intPart /= 5;\par
+    \}\par
+    printf("\\n");\par
+\par
+    printf("Decimal part in base-5: 0.");\par
+    for (int i = 0; i < 5; i++) \{ // Display up to 5 digits in the fractional part\par
+        decimalPart *= 5;\par
+        int digit = (int)decimalPart;\par
+        decimalPart -= digit;\par
+        printf("%d", digit);\par
+    \}\par
+    printf("\\n");\par
+\}\par
+\par
+int main() \{\par
+    double num = 23.65;\par
+    decimalToBase5(num);\par
+    return 0;\par
+\}\par
+Decimal to Base-7:\par
+(772)10 = (?)7\par
+\par
+#include <stdio.h>\par
+\par
+void decimalToBase7(int num) \{\par
+    \par
+    printf("Integer part in base-7: ");\par
+    while (num > 0) \{\par
+        int digit = num % 7;\par
+        printf("%d", digit);\par
+        num /= 7;\par
+    \}\par
+    printf("\\n");\par
+\}\par
+\par
+int main() \{\par
+    int num = 772;\par
+    decimalToBase7(num);\par
+    return 0;\par
+\}\par
+
+\pard\sl360\slmult1\qj\nosupersub Q49. Covert the following numbers to decimal number system-\par
+
+\pard{\pntext\f8\'B7\tab}{\*\pn\pnlvlblt\pnf8\pnindent360{\pntxtb\'B7}}\fi-360\li720\sl360\slmult1\qj\tx720 (325.54)\sub 6\nosupersub  = (?)\sub 10\nosupersub\par
+{\pntext\f8\'B7\tab}(1001010110101.1110101)\sub 2\nosupersub  = (?)\sub 10\nosupersub\par
+{\pntext\f8\'B7\tab}(742.72)\sub 8\nosupersub  = (?)\sub 10\nosupersub\par
+{\pntext\f8\'B7\tab}(AC94.C5)\sub 16\nosupersub  = (?)\sub 10\nosupersub\par
+
+\pard\sl360\slmult1\qj\tx720\par
+\sub\par
+\fs40  Ans -\fs24 #include <stdio.h>\par
+#include <math.h>\par
+\par
+int convertBase6ToDecimal(const char *base6) \{\par
+    int decimal = 0;\par
+    int length = strlen(base6);\par
+\par
+    for (int i = 0; i < length; i++) \{\par
+        char digit = base6[i];\par
+        int value = digit - '0'; // Convert character to integer\par
+\par
+        \par
+        if (value < 0 || value >= 6) \{\par
+            printf("Invalid base-6 digit: %c\\n", digit);\par
+            return -1; \par
+        \}\par
+\par
+        decimal += value * pow(6, length - i - 1);\par
+    \}\par
+\par
+    return decimal;\par
+\}\par
+\par
+int main() \{\par
+    const char *base6 = "325.54";\par
+    int decimalValue = convertBase6ToDecimal(base6);\par
+    \par
+    if (decimalValue != -1) \{\par
+        printf("(%s)6 = (%d)10\\n", base6, decimalValue);\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+Convert from Binary (Base-2) to Decimal:\par
+\par
+#include <stdio.h>\par
+#include <math.h>\par
+\par
+int convertBinaryToDecimal(const char *binary) \{\par
+    int decimal = 0;\par
+    int length = strlen(binary);\par
+\par
+    for (int i = 0; i < length; i++) \{\par
+        char digit = binary[i];\par
+        int value = digit - '0'; \par
+\par
+        // Ensure the digit is valid in binary\par
+        if (value < 0 || value > 1) \{\par
+            printf("Invalid binary digit: %c\\n", digit);\par
+            return -1; \par
+        \}\par
+\par
+        decimal += value * pow(2, length - i - 1);\par
+    \}\par
+\par
+    return decimal;\par
+\}\par
+\par
+int main() \{\par
+    const char *binary = "1001010110101.1110101";\par
+    int decimalValue = convertBinaryToDecimal(binary);\par
+    \par
+    if (decimalValue != -1) \{\par
+        printf("(%s)2 = (%d)10\\n", binary, decimalValue);\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+Convert from Octal (Base-8) to Decimal:\par
+\par
+#include <stdio.h>\par
+\par
+int convertOctalToDecimal(const char *octal) \{\par
+    int decimal = 0;\par
+    int length = strlen(octal);\par
+\par
+    for (int i = 0; i < length; i++) \{\par
+        char digit = octal[i];\par
+        int value = digit - '0'; \par
+\par
+        if (value < 0 || value >= 8) \{\par
+            printf("Invalid octal digit: %c\\n", digit);\par
+            return -1; \par
+        \}\par
+\par
+        decimal = decimal * 8 + value;\par
+    \}\par
+\par
+    return decimal;\par
+\}\par
+\par
+int main() \{\par
+    const char *octal = "742.72";\par
+    int decimalValue = convertOctalToDecimal(octal);\par
+    \par
+    if (decimalValue != -1) \{\par
+        printf("(%s)8 = (%d)10\\n", octal, decimalValue);\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+Convert from Hexadecimal (Base-16) to Decimal:\par
+#include <stdio.h>\par
+#include <string.h>\par
+#include <math.h>\par
+\par
+int convertHexToDecimal(const char *hex) \{\par
+    int decimal = 0;\par
+    int length = strlen(hex);\par
+\par
+    for (int i = 0; i < length; i++) \{\par
+        char digit = hex[i];\par
+        int value;\par
+\par
+        if (digit >= '0' && digit <= '9') \{\par
+            value = digit - '0';\par
+        \} else if (digit >= 'A' && digit <= 'F') \{\par
+            value = digit - 'A' + 10;\par
+        \} else if (digit >= 'a' && digit <= 'f') \{\par
+            value = digit - 'a' + 10;\par
+        \} else \{\par
+            printf("Invalid hexadecimal digit: %c\\n", digit);\par
+            return -1; \par
+        \}\par
+\par
+        decimal += value * pow(16, length - i - 1);\par
+    \}\par
+\par
+    return decimal;\par
+\}\par
+\par
+int main() \{\par
+    const char *hex = "AC94.C5";\par
+    int decimalValue = convertHexToDecimal(hex);\par
+    \par
+    if (decimalValue != -1) \{\par
+        printf("(%s)16 = (%d)10\\n", hex, decimalValue);\par
+    \}\par
+\par
+    return 0;\par
+\}\par
+\nosupersub\par
+
+\pard\sl360\slmult1\qj Q50. Perform the following conversion from Hexadecimal to other number as directed-\par
+
+\pard\li720\sl360\slmult1\qj  (DB56.CD4)\sub 16\nosupersub  = (?)\sub 2,\nosupersub    (?)\sub 8\nosupersub ,   (?)\sub 4\par
+
+\pard\sl360\slmult1\qj\nosupersub Q51. Perform the following conversion from octal to other number as directed-\par
+
+\pard\li720\sl360\slmult1\qj (473.42)\sub 8\nosupersub  = (?)\sub 2\nosupersub ,   (?)\sub 10,\nosupersub    (?)\sub 16\nosupersub ,   (?)\sub 5\par
+
+\pard\sl360\slmult1\qj\nosupersub Q52. Find the value of A?\par
+
+\pard{\pntext\f8\'B7\tab}{\*\pn\pnlvlblt\pnf8\pnindent360{\pntxtb\'B7}}\fi-360\li1080\sl360\slmult1\qj (23)\sub 10\nosupersub  = (17)\sub A\par
+{\pntext\f8\'B7\tab}\nosupersub (21)\sub 16\nosupersub  = (41\sub )A\nosupersub\par
+{\pntext\f8\'B7\tab}(32)\sub 8\nosupersub  = (101)\sub A\nosupersub\par
+
+\pard\sl360\slmult1\qj\par
+Q53:  What will be the output of following program? Assume integer is of 2 bytes\par
+void main()\{\par
+int  a=32770;\par
+printf(\ldblquote %d\rdblquote ,a);\par
+\}\par
+\par
+
+\pard\sb100\sa100\sl240\slmult1 Answer: Assigning the value 32770 to an int variable exceeds its range because 32770 is greater than 32,767. This will lead to an overflow.\cf3\fs27 The output of the program will be \b -32766\b0 .\par
+The reason for this is that the integer \f6\fs20 a\f1\fs27  is assigned a value of \f6\fs20 32770\f1\fs27 , which is greater than the maximum value that can be stored in a 2-byte integer. The maximum value that can be stored in a 2-byte integer is \f6\fs20 32767\f1\fs27 . When an integer overflows, it wraps around to the minimum value that can be stored in a 2-byte integer, which is \f6\fs20 -32768\f1\fs27 . Therefore, the value of \f6\fs20 a\f1\fs27  becomes \f6\fs20 -32766\f1\fs27  (\f6\fs20 -32768 + 2\f1\fs27 ), and this is what gets printed by the \f6\fs20 printf()\f1\fs27  statement.\par
+I hope this helps!\par
+
+\pard\sl360\slmult1\qj\cf0\fs24\par
+
+\pard\sl240\slmult1\qj Q54: #include <stdio.h>\par
+ int main()\par
+\{\par
+ float c = 5.0;\par
+ printf ("Temperature in Fahrenheit is %.2f", (9/5)*c + 32);\par
+ return 0;\par
+\}\par
+\par
+Answer:       \par
+  #include <stdio.h>\par
+\par
+int main() \{\par
+    float c = 5.0;\par
+    printf("Temperature in Fahrenheit is %.2f", (9.0/5.0)*c + 32);\par
+    return 0;\par
+\}\par
+\par
+       \par
+
+\pard\sl360\slmult1\qj\par
+
+\pard\sl240\slmult1\qj\par
+
+\pard\sl240\slmult1\par
+
+\pard\li720\sl240\slmult1\qj\f0\fs22\par
+}
+ 
